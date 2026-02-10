@@ -1,0 +1,62 @@
+@import './flex.scss';
+
+header {
+    width: 100%;
+    height: 50px;
+    background: rgba(33, 32, 32, 0.567);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    &:hover {
+        background-color: black;
+    }
+
+    button {
+        display: none;
+    }
+
+    nav {
+        padding-left: 30px;
+        width: 30%;
+        height: 100%;
+        @include flex();
+        justify-content: start;
+        gap: 50px;
+        min-width: max-content;
+
+
+
+        a { padding: 0 6px;
+            letter-spacing: 2.2px;
+            text-decoration: none;
+            color: rgb(247, 237, 237);
+            width: calc(100% / 4);
+            height: 100%;
+            @include flex();
+            min-width: max-content;
+
+            &:hover {
+                background: rgba(252, 249, 249, 0.942);
+                color: black;
+            }
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        width: 100%;
+
+        nav>button {
+            display: block !important;
+            background: rgba(140, 140, 156, 0);
+            border: none;
+        }
+
+        nav>a {
+            display: none !important;
+        }
+
+    }
+}
