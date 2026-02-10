@@ -7,8 +7,16 @@
 }
 
 body {
+    height: auto;
     width: 100%;
     min-width: 360px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @import './styles/header.scss';
@@ -18,5 +26,6 @@ body {
 @import './styles/flex.scss';
 @import './styles/footer.scss';
 @import './styles/location.scss';
+
 
 
